@@ -1,0 +1,329 @@
+
+body{ font-size: 20px; font-display: swap; padding:1px; margin:1px; background: #faebd7;}
+html { scroll-behavior: smooth;  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+header{
+    background-image: linear-gradient(  violet ,rgb(33, 33, 136),rgb(145, 244, 145));   padding:1px 30px; margin:0px;
+    position: fixed; width: 100%; top:0;  will-change: transform;  box-sizing: border-box; transition:  all 0.3s ease;
+    z-index: 9999;
+}
+.nav-links-smallscreen.show{
+left:0;
+}
+.navbar-smallscreen{
+    display: flex; justify-content: space-between;  align-items: center; 
+}
+.menu-icon:hover{
+background-color: gray; color: blue;
+}
+.link-closebtn{ position: absolute; right:10px; top:10px; border-radius:50%; cursor : pointer}
+.link-closebtn:hover{ background-color: aqua;}
+.nav-links-smallscreen{
+    list-style-type: none; z-index: 999;
+position: fixed;  top:0px; left: -100% ; width: 300px; height: 100vh;   padding-top: 60px;
+   transition: left 0.3s ease; background-color: rgb(108, 98, 128); 
+}
+.nav-links-smallscreen li a{
+text-decoration: none;   color:white;  display: block; width: 150px;
+}
+
+.nav-links-smallscreen li {
+ padding:10px 26px; 
+}
+
+.nav-links-smallscreen li:hover{
+    background-color: gray; opacity:0.8; 
+}
+/* For large screen navbar  */
+.navbar{
+    display: none;
+}
+
+.smallscreen-overlay{
+    position: fixed; top:0; left:0; width:100vw; height:100vh; background-color: rgba(0,0,0,0.5); visibility: hidden; z-index: 1;
+}
+.cta-button {
+    background-color: blue; color: white; border-radius: 10px;
+    text-decoration: none; padding: 10px 16px; 
+}
+.cta-button:hover{
+    box-shadow: 0px 0px  20px 4px green;  background-color: darkkhaki;
+}
+.navbar-menu-smallscreen{
+position: relative; 
+}
+
+
+/* Hero Section */
+#hero{
+    height: 90vh; background:url('assets/landingphoto.png') no-repeat center center /cover; display: flex; justify-content: center; align-items: center;
+    text-align: center; 
+}
+@media screen  and (min-width: 768px){
+  #hero{ background:  radial-gradient(blue, purple, rgb(20, 175, 87), yellow, black, indigo); }
+}
+.prophoto{
+    width: 40vw; height: 90vh;   box-shadow: 0px 0px 20px 4px gray;
+}
+.hero-title{
+    font-family:Georgia, 'Times New Roman', Times, serif; color: greenyellow; font-size: 5vw; text-shadow: 2px 2px 4px black;background-color: rgba(108, 98, 128,0.8); 
+}
+.subheading{
+    color: gold;  padding: 4px 5vw; font-size: 18px; background-color: rgb(38, 22, 101);}
+
+.hero-btn{
+    display: flex; gap:15px;
+    margin-top: 50px;}
+
+
+#testimonials{ width: 80%; margin: auto;}
+ .testimonial-item{ display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }   
+
+.accordion-item{
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    background-color: rgba(201, 159, 20, 0.8);
+     border-radius: 12px;;
+}
+
+.accordion-header{
+     padding:  10px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:10px;
+    font-size:28px;
+    font-weight:600;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.accordion-header:hover{
+color: blue;
+}
+
+.accordion-header span{
+    transition:0.3s;
+    display: flex;
+    background-color: grey; color: white; width: 35px; height:35px; border-radius: 50%;
+    justify-content: center; align-items: center;
+    font-size: 25px;
+}
+.accordion-header button{ background-color: #cab436; border: none;}
+.accordion-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    padding:0 25px;
+    color:#ccc;
+    font-size: 18px;
+    border-top:1px solid lightgrey;
+}
+
+.accordion-content p{
+    padding:15px 0 25px;
+}
+#client-asks{ padding: 50px;}
+
+.accordion-item.active .accordion-content{
+    max-height:450px; padding:15px; color: black;
+}
+.accordion-header span{
+    transform:rotate(-90deg);
+}
+.accordion-item.active .accordion-header span{
+    transform:rotate(90deg);
+}
+.accordion-item.active .accordion-header {
+color: blue;
+}
+ul { list-style-type: none;}
+ul li{color: rgb(15, 15, 15); margin-top: 12px;}
+.skills-section{
+    display: flex; gap: 50px; flex-wrap: wrap; background-color: blue; color: white; justify-content: center; border-radius: 10px; align-items: center; padding: 20px;
+}
+.what-ido{ margin-top:70px; width: 50%; margin: auto;}
+#about{
+    background-color: gray; padding:15px ;
+}
+.bio-des{
+    background-color: blue; color: white; line-height: 35px; padding:20px 60px; border-radius: 10px; margin: 0px 20px; font-size:25px;
+}
+.accordion-content{ color: black;}
+
+.services-list{ display: flex; gap: 20px;  flex-wrap: wrap; justify-content: center; }
+.services-card{  text-align: center; padding:15px 8px; box-shadow: 0px 0px 13px  gray;  width: 300px;  border-radius: 10px; background-color: rgba(255, 217, 0, 0.582);
+}
+.services-card.price{ padding:15px 3px; box-shadow: 0px 0px 13px  gray;  max-width: 350px; border-radius: 10px; background-color: rgba(255, 217, 0, 0.582);
+}
+.services-card.price ul{ margin-left:0px; list-style-type: none;}
+.services-card.price ul li{ position:relative;  margin-top:15px; text-align: left; margin-left:0px; }
+.services-card.price ul li::before{ content:"✅";
+ position: absolute; left:-32px;}
+ .why-me li{ color: white;}
+#client-asks{ padding: 50px 10px;}
+/* Portfolio Section */
+#portfolio{
+    padding:15px 20px;  box-sizing: border-box;
+}
+
+.project-grid{
+    display: flex;  gap: 20px; overflow: hidden;  flex-wrap: wrap; justify-content: center;
+}
+.project-item{  width: 300px; box-shadow: 0px 0px 13px  gray; padding:15px 20px; border-radius: 10px;
+}
+.project-image{
+    width: 300px; height:500px; object-fit: cover; border-radius: 10px; object-position:  center;
+}
+.view-project-button{
+    text-decoration: none; background-color: blue; color: white; padding: 10px 16px; border-radius: 10px;
+}
+.view-project-button:hover{
+    box-shadow: 0px 0px 20px 4px green; background-color: darkkhaki;
+}
+
+.view-live-project-btn{
+    text-decoration: none; background-color: blue; color: white; padding: 10px 16px; border-radius: 10px;
+}
+.view-live-project-btn:hover{
+    box-shadow: 0px 0px 20px 4px green; background-color: darkkhaki;
+}
+.tooltip{
+    visibility: hidden; width:300px; background-color: black; color: #fff; text-align: center; border-radius: 6px; padding: 5px 0;
+    position: absolute; z-index: 1; bottom: 125%; left: 50%; margin-left: -80px; opacity: 0; transition: opacity 0.3s;
+}
+
+.view-live-project-btn:hover .tooltip{
+    visibility: visible; opacity: 1;
+}
+#cotact{ width: 100%; box-sizing: border-box;}
+.social-links img{ width: 30px; height: 30px;}
+.input{ width: 90%; padding:10px 15px; border-radius: 8px; border: none; box-shadow: 0px 0px 5px gray; }
+
+
+#services{
+     padding:25px 20px; 
+}
+.services-list{
+    display: flex; gap: 50px;  flex-wrap: wrap;
+}
+.service-item ul{
+    line-height: 30px; color:greenyellow
+}
+#contact{
+    padding:15px 20px; justify-content: center; text-align: center; background-color: rgb(13, 159, 188); 
+}
+#contact-form{
+    display: flex; flex-direction: column; margin: 60px auto; gap: 15px; max-width: 700px; align-items: center; margin-top: 20px;
+}
+
+.faq-container{ display: flex; gap:50px;}
+
+.social-links{
+    margin-top: 20px; display: flex; justify-content: center; gap: 20px;
+}
+.social-links a{
+    text-decoration: none; color: white; font-size: 24px;
+}
+
+.social-links a:hover{
+    color: aqua; text-decoration: underline;
+}
+.overlay{
+    position: fixed; top:0; left:0;  z-index: 777; width:100vw;
+    pointer-events: all; visibility: hidden; height:100vh; background-color: rgba(67, 60, 60,0.7); z-index: 1;
+}
+.closebtn{
+    position: absolute; top:3px; right:5px;
+}
+.closebtn:hover{
+    background-color: gray; color: red;
+}
+.marketplace-links a{ color:  white;}
+.marketplace-links a:hover{ color:  skyblue;}
+.market-header{ font-size: 30px;}
+/* Responsiveness for mobile & tablet  */
+@media screen and (max-width:768px){
+ header{ padding:10px  20px;}
+     .hero-image{
+        display: none;
+} 
+
+#hero{
+    background: url('assets/landingphoto.webp') no-repeat center center /cover;
+}   
+    .hero-title{
+        font-size: 7vw;
+    }
+    .subheading{
+        font-size: 16px;
+    }
+     #testimonials{ width: 100%;}
+   .testimonial-item{ grid-template-columns: 1fr;}
+   #services{ padding:5px; box-sizing: border-box; }
+    .services-list  { width: 100%; flex-direction: column; align-items: center; padding: 5px; box-sizing: border-box; }
+  .services-card{ width: 300px; padding:5px; }
+    #portfolio{
+      padding:15px 8px;}
+      .project-item{
+          width: 100%;  padding:5px;
+      }
+      .project-image{
+          width: 100%; height:400px;
+      }
+   .view-project-button{padding: 8px 12px;}
+    #about{ margin: 0px; padding: 8px; }
+    .bio-des{
+        font-size:18px; padding:15px 8px;  margin:0px;
+    }
+    .what-ido{ width: 100%;}
+    .faq-container{flex-direction: column;}
+      .social-links a{
+     font-size: 17px;
+}
+blockquote{ margin: 15px;}
+.market-header{ font-size:25px;}
+.input{
+    width: 100%;
+}
+.accordion-header{ font-size:20px;}
+.why-me{ padding: 5px;}
+}
+section {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    opacity: 0;
+    transform: translateX(-50%);
+    will-change: opacity, transform;
+}
+section.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* For larger screens */
+
+@media screen  and (min-width:768px) {
+.navbar{
+    display: block;
+}
+.navbar-smallscreen{
+    display: none;
+}
+
+.navbar{
+    display: flex; justify-content: space-between; align-items: center;
+}
+.nav-links{
+    display: flex; list-style-type: none;  gap: 4vw; padding:10px 5px;
+}
+.nav-links li a{
+    text-decoration: none; color:white; font-size: 18px;}
+
+.nav-links li:hover{
+    background-color: rgb(48, 22, 175);
+}
+.nav-links li {
+    padding:10px 16px; border-radius: 10px;
+}
+}
+

@@ -1,0 +1,150 @@
+body{ font-size:20px; width:99.5%; margin: 0!important;  box-sizing: border-box;    background-color:antiquewhite;  font-display: swap;}
+
+html{ scroll-behavior: smooth; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+main{ width: 100%; max-width: 900px; margin: auto;}
+.bestclothpage li{ margin-top:18px; color: green; }
+header{
+    background: linear-gradient(  violet ,rgb(33, 33, 136),rgb(145, 244,145));   padding:1px 60px; 
+    position: fixed; top:0; box-sizing: border-box; width: 100%; margin:0; transition: all 0.3s linear; will-change: transform;
+      height:auto; 
+}
+ @media screen and (max-width: 600px) {
+    header{ padding:10px 20px;}
+ }
+.nav-links-smallscreen.show{
+left:0;
+}
+.navbar-smallscreen{
+    display: flex; justify-content: space-between;  align-items: center;  position: relative; 
+}
+.link-closebtn{ position: absolute; top:10px; right: 10px; border-radius:20px;}
+.menu-icon:hover{
+background-color: gray; color: blue;
+}
+
+.nav-links-smallscreen{list-style-type: none;  
+position: fixed;  top:0px; left: -100% ; width: 80%; height: 100vh; z-index: 99999;  padding-top: 60px;
+   transition: left 0.3s ease; background-color: rgb(108, 98, 128); 
+}
+.nav-links-smallscreen li a{
+text-decoration: none;   color:white;  display: block; width: 150px;
+}
+
+.nav-links-smallscreen li {
+ padding:10px 26px; 
+}
+
+.nav-links-smallscreen li:hover{
+    background-color: gray; opacity:0.8; 
+}
+/* For large screen navbar  */
+.navbar{
+    display: none;
+}
+.mobile-view-wrapper{ display: none; gap:50px; margin-top: 20px; overflow: auto; height: 150vh; border: 2px solid lightblue; box-shadow: 0px 0px 15px black;}
+
+.smallscreen-overlay{
+    position: fixed; top:0; left:0; width:100vw; height:100vh; background-color: rgba(0,0,0,0.5); visibility: hidden; z-index: 1;
+}
+.cta-button {
+    background-color: blue; color: white; border-radius: 10px;
+    text-decoration: none; padding: 10px 16px; border: none;
+}
+.cta-button:hover{
+    box-shadow: 0px 0px  20px 4px green;  background-color: darkkhaki;
+}
+.navbar-menu-smallscreen{
+position: relative; 
+}
+
+#contact{
+    padding:15px 20px; margin-top: 100px; justify-content: center; text-align: center; background-color: rgb(108, 98, 128); 
+}
+#contact-form{
+    display: flex; flex-direction: column; margin: 60px auto; gap: 15px; width: 100%; max-width: 700px; align-items: center; margin-top: 20px;
+}
+.social-links{
+    margin-top: 20px; display: flex; justify-content: center; gap: 20px;
+}
+.social-links a{
+    text-decoration: none; color: white; font-size: 24px;
+}
+@media screen and (max-width:668px) {
+    .social-links a{
+     font-size: 17px;
+}
+}
+#contact{ color: white;}
+.cta-button-footer{ background-color: blue; color: white;  padding: 6px 70px; border-radius: 10px;
+    text-decoration: none;  width:100%; border: none; font-size: 30px;}
+    .cta-button-footer:hover{
+    box-shadow: 0px 0px  20px 4px green;  background-color: darkkhaki;
+}
+.social-links a:hover{
+    color: aqua; text-decoration: underline;
+}
+.overlay{
+    position: fixed; top:0; left:0;  z-index: 777; width:100vw;
+    pointer-events: all; visibility: hidden; height:100vh; background-color: rgba(67, 60, 60,0.7); z-index: 1;
+}
+.marketplace-links a{ color:rgba(6, 229, 65, 0.822)}
+.marketplace-links a:hover{ color:  skyblue;}
+
+.contact-fsproj:hover{
+      box-shadow: 0px 0px  20px 4px green;  background-color: darkkhaki;
+ }
+
+.show-mobile-view-btn{  border-radius: 10px; border: none; background-color: aquamarine;  padding: 8px 30px; font-size: 120%;}
+
+.show-mobile-view-btn:hover{ background-color: azure; color: black;}
+.hide-mobile-view{border: none; margin-top:70px; border-radius: 10px; background-color: aquamarine;  padding: 8px 30px; font-size: 30px;}
+.hide-mobile-view:hover{background-color: azure; color: black;}
+/* For larger screens */
+.sticky{
+    position: fixed; top: 100px; right: 2px; background-color: rgb(39, 39, 181); color: white; padding: 10px 16px; border-radius: 10px;
+    text-decoration: none; z-index: 999;
+}
+.sticky.stickylow{ z-index: 0;}
+@media screen and (max-width:400px) {
+    h2{ font-size: 20px;}
+    img.mobile-view-images{
+        width:350px;
+    }
+    .cta-button-footer{ padding: 10px;}
+    .mobile-view-wrapper{ width:100%; margin:0px; padding: 0px}
+    body{padding:0px; margin: 0px;}
+    
+}
+
+
+.sticky:hover{
+    box-shadow: 0px 0px 20px 4px green; background-color: darkkhaki;
+}
+.sticky a{
+    text-decoration: none; color: white; font-size: 20px; outline:none;
+}
+@media screen  and (min-width:768px) {
+.navbar{
+    display: block;
+}
+.navbar-smallscreen{
+    display: none;
+}
+
+.navbar{
+    display: flex; justify-content: space-between; align-items: center;
+}
+.nav-links{
+    display: flex; list-style-type: none;  gap: 4vw; padding:10px 5px;
+}
+.nav-links li a{
+    text-decoration: none; color:white; font-size: 18px;}
+
+.nav-links li:hover{
+    background-color: rgb(20, 29, 203);
+}
+.nav-links li {
+    padding:10px 16px; border-radius: 10px;
+}
+}
+
